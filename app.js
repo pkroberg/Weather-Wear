@@ -5,6 +5,7 @@ let state="Colorado";
 let country="USA";
 let lat='';
 let lon='';
+let temp=null;
 
 let directGeocoding=`http://api.openweathermap.org/geo/1.0/direct?q=${city},${state},${country}&limit=5&appid=e5bf64efcd979a72fe523a3c4c280da2`;
 
@@ -22,6 +23,8 @@ fetch(directGeocoding)
             .then((response) => response.json())
             .then((jsObject) => {
                 console.log(jsObject);
+                temp=jsObject.main.temp;
+                console.log("Current Temperature: "+temp+" \u00B0F");
             })
             .catch((error) => {
                 console.log('Error:', error);
