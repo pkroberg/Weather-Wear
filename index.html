@@ -8,7 +8,15 @@
 </head>
 
 <body>
-    <h3 class="temp" id="current-temp"></h3>
+    <h1>Weather-Wear</h1>
+    <h2>Enter your location to get the current temperature and what to wear!</h2>
+    <form action="index.php" method="post">
+        <input type="text" name="location" id="location" placeholder="City">
+        <input type="text" name="location" id="location" placeholder="State">
+        <input type="text" name="location" id="location" placeholder="Country">
+    </form>
+    <input type="submit" value="Submit">
+    <h3 class="temp" id="current-temp">Current Temperature:</h3>
     <script src="app.js"></script>
 </body>
 

@@ -25,7 +25,7 @@ fetch(directGeocoding)
                 console.log(jsObject);
                 temp=jsObject.main.temp;
                 console.log("Current Temperature: "+temp+" \u00B0F");
-                document.getElementById('current-temp').textContent=temp;
+                document.getElementById('current-temp').textContent="Current Temperature: "+temp+" \u00B0F";
             })
             .catch((error) => {
                 console.log('Error:', error);
