@@ -7,6 +7,12 @@ let description='';
 //get my location button event listener and function
 document.getElementById('getLocationBtn').addEventListener('click', getLocation);
 
+function capitalizeWords(str) {
+    return str.replace(/\b\w/g, function (char) {
+        return char.toUpperCase();
+    });
+}
+
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition, showError);
@@ -31,7 +37,7 @@ function showPosition(position) {
             feels_like=jsObject.main.feels_like;
             temp_min=jsObject.main.temp_min;
             temp_max=jsObject.main.temp_max;
-            description=jsObject.weather[0].description.toString();
+            description=capitalizeWords(jsObject.weather[0].description.toString());
             console.log("Current Temperature: "+temp+" \u00B0F");
             console.log("Feels Like: "+feels_like+" \u00B0F");
             console.log("Min: "+temp_min+" \u00B0F");
