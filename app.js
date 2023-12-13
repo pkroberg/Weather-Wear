@@ -7,6 +7,7 @@ let description='';
 //get my location button event listener and function
 document.getElementById('getLocationBtn').addEventListener('click', getLocation);
 
+//capitalize description
 function capitalizeWords(str) {
     return str.replace(/\b\w/g, function (char) {
         return char.toUpperCase();
@@ -48,6 +49,22 @@ function showPosition(position) {
             document.getElementById('tempMin').textContent="Minimum Temp: "+temp_min+" \u00B0F";
             document.getElementById('tempMax').textContent="Maxiumum Temp: "+temp_max+" \u00B0F";
             document.getElementById('description').textContent="Description: "+description;
+
+            //change the source of the image based on the temperature
+            function changeImage() {
+                if (temp<=32) {
+                    document.getElementById('outfit').src='pics/freezingMan.jpg';
+                } else if (temp>32&&temp<=50) {
+                    document.getElementById('outfit').src='pics/coldMan.jpg';
+                } else if (temp>50&&temp<=70) {
+                    document.getElementById('outfit').src='pics/chillyMan.jpg';
+                } else if (temp>70&&temp<=85) {
+                    document.getElementById('outfit').src='pics/niceMan.jpg';
+                } else if (temp>85) {
+                    document.getElementById('outfit').src='pics/hotMan.jpg';
+                }
+            }
+            changeImage();
         })
         .catch((error) => {
             console.log('Error:', error);
