@@ -3,8 +3,7 @@
 
 let lat='';
 let lon='';
-let temp=null;
-
+let description='';
 //get my location button event listener and function
 document.getElementById('getLocationBtn').addEventListener('click', getLocation);
 
@@ -29,8 +28,20 @@ function showPosition(position) {
         .then((jsObject) => {
             console.log(jsObject);
             temp=jsObject.main.temp;
+            feels_like=jsObject.main.feels_like;
+            temp_min=jsObject.main.temp_min;
+            temp_max=jsObject.main.temp_max;
+            description=jsObject.weather[0].description.toString();
             console.log("Current Temperature: "+temp+" \u00B0F");
-            document.getElementById('current-temp').textContent="Current Temperature: "+temp+" \u00B0F";
+            console.log("Feels Like: "+feels_like+" \u00B0F");
+            console.log("Min: "+temp_min+" \u00B0F");
+            console.log("Max: "+temp_max+" \u00B0F");
+            console.log("Description: "+description);
+            document.getElementById('current-temp').textContent="Current Temp: "+temp+" \u00B0F";
+            document.getElementById('feelsLike').textContent="Feels Like: "+feels_like+" \u00B0F";
+            document.getElementById('tempMin').textContent="Minimum Temp: "+temp_min+" \u00B0F";
+            document.getElementById('tempMax').textContent="Maxiumum Temp: "+temp_max+" \u00B0F";
+            document.getElementById('description').textContent="Description: "+description;
         })
         .catch((error) => {
             console.log('Error:', error);
