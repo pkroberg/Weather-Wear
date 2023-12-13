@@ -53,15 +53,34 @@ function showPosition(position) {
             //change the source of the image based on the temperature
             function changeImage() {
                 if (temp<=32) {
-                    document.getElementById('outfit').src='pics/freezingMan.jpg';
+                    document.getElementById('hat').src='pics/freezingHat.jpg';
+                    document.getElementById('outerWear').src='pics/freezingOuterWear.jpg';
+                    document.getElementById('top').src='pics/freezingTop.jpg';
+                    document.getElementById('bottoms').src='pics/freezingBottoms.jpg';
+                    document.getElementById('shoes').src='pics/freezingShoes.jpg';
                 } else if (temp>32&&temp<=50) {
-                    document.getElementById('outfit').src='pics/coldMan.jpg';
-                } else if (temp>50&&temp<=70) {
-                    document.getElementById('outfit').src='pics/chillyMan.jpg';
+                    document.getElementById('hat').src='pics/freezingHat.jpg';
+                    document.getElementById('outerWear').src='pics/freezingOuterWear.jpg';
+                    document.getElementById('top').src='pics/freezingTop.jpg';
+                    document.getElementById('bottoms').src='pics/freezingBottoms.jpg';
+                    document.getElementById('shoes').src='pics/freezingShoes.jpg';
+                    document.getElementById('hat').src='pics/freezingHat.jpg';
+                    document.getElementById('outerWear').src='pics/freezingOuterWear.jpg';
+                    document.getElementById('top').src='pics/freezingTop.jpg';
+                    document.getElementById('bottoms').src='pics/freezingBottoms.jpg';
+                    document.getElementById('shoes').src='pics/freezingShoes.jpg';
                 } else if (temp>70&&temp<=85) {
-                    document.getElementById('outfit').src='pics/niceMan.jpg';
+                    document.getElementById('hat').src='pics/freezingHat.jpg';
+                    document.getElementById('outerWear').src='pics/freezingOuterWear.jpg';
+                    document.getElementById('top').src='pics/freezingTop.jpg';
+                    document.getElementById('bottoms').src='pics/freezingBottoms.jpg';
+                    document.getElementById('shoes').src='pics/freezingShoes.jpg';
                 } else if (temp>85) {
-                    document.getElementById('outfit').src='pics/hotMan.jpg';
+                    document.getElementById('hat').src='pics/freezingHat.jpg';
+                    document.getElementById('outerWear').src='pics/freezingOuterWear.jpg';
+                    document.getElementById('top').src='pics/freezingTop.jpg';
+                    document.getElementById('bottoms').src='pics/freezingBottoms.jpg';
+                    document.getElementById('shoes').src='pics/freezingShoes.jpg';
                 }
             }
             changeImage();
