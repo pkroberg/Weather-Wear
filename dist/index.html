@@ -9,20 +9,32 @@
 </head>
 
 <body>
-    <h1>Weather-Wear</h1>
-    <h2>Click "Get My Location" to get weather appropriate outfit examples!</h2>
-    <button id="getLocationBtn">Get My Location</button>
-    <h3 id="current-temp"></h3>
-    <h3 id="feelsLike"></h3>
-    <h3 id="tempMin"></h3>
-    <h3 id="tempMax"></h3>
-    <h3 id="main"></h3>
-    <h3 id="description"></h3>
-    <img id="hat" src="" />
-    <img id="outerWear" src="" />
-    <img id="top" src="" />
-    <img id="bottoms" src="" />
-    <img id="shoes" src="" />
+    <h1 class="text-center mt-5 text-3xl">Weather-Wear</h1>
+    <h2 class="text-center mt-5">Click "Get My Location" to get weather appropriate outfit examples!</h2>
+    <div class="flex justify-center m-10">
+        <button id="getLocationBtn"
+            class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+            Get My Location
+        </button>
+    </div>
+
+    <div class="text-center mb-10">
+        <h3 id="current-temp"></h3>
+        <h3 id="feelsLike"></h3>
+        <h3 id="tempMin"></h3>
+        <h3 id="tempMax"></h3>
+        <h3 id="main"></h3>
+        <h3 id="description"></h3>
+    </div>
+
+    <div class="flex flex-col justify-center items-center gap-5 mb-5">
+        <img id="hat" class="rounded-2xl max-w-lg" src="" />
+        <img id="outerWear" class="rounded-2xl max-w-lg" src="" />
+        <img id="top" class="rounded-2xl max-w-lg" src="" />
+        <img id="bottoms" class="rounded-2xl max-w-lg" src="" />
+        <img id="shoes" class="rounded-2xl max-w-lg" src="" />
+    </div>
+
     <script src="app.js"></script>
 </body>
 
