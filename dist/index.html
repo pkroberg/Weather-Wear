@@ -5,24 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <title>Weather-Wear</title>
 </head>
 
-<body>
+<body class="bg-palette-green5">
     <!-- Header -->
-    <header>
-        <h1 class="text-center mt-5 text-3xl">Weather-Wear</h1>
-        <h2 class="text-center mt-5">Click "Get My Location" to get a weather appropriate outfit example!</h2>
+    <header class="sticky top-0 bg-palette-green5 font-thin">
+        <h1 class="text-palette-green1 text-center mt-5 text-3xl">Weather-Wear</h1>
+        <h2 class="text-palette-green1 text-center mt-5 text-xl">Click "Get My Location" to get a weather
+            appropriate outfit
+            example!</h2>
     </header>
+
+
 
     <!-- Get my location button and loading animation -->
     <div class="flex justify-center my-8">
         <button id="getLocationBtn"
-            class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded-xl shadow">
+            class="bg-palette-green2 hover:bg-palette-green1 text-gray-800 font-semibold py-2 px-4 border border-gray-800 rounded-xl shadow">
             Get My Location
         </button>
         <button disabled type="button" id="loading"
-            class="hidden bg-white text-gray-800 focus:ring-4 border border-gray-400 font-medium rounded-xl px-4 py-2 text-center me-2 items-center">
+            class="hidden bg-palette-green2 text-gray-800 focus:ring-4 border border-gray-800 font-medium rounded-xl px-4 py-2 text-center me-2 items-center">
             <svg aria-hidden="true" role="status" class="inline w-4 h-4 me-3 text-white animate-spin"
                 viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -37,13 +44,20 @@
     </div>
 
     <!-- Weather information -->
-    <div class="text-center mb-2">
-        <h3 id="current-temp"></h3>
-        <h3 id="feelsLike"></h3>
-        <h3 id="tempMin"></h3>
-        <h3 id="tempMax"></h3>
-        <h3 id="main"></h3>
-        <h3 id="description"></h3>
+    <div class="text-center text-lg mb-8 font-medium">
+        <h3 id="current-temp" class="mb-2"></h3>
+        <h3 id="feelsLike" class="mb-2"></h3>
+        <h3 id="tempMin" class="mb-2"></h3>
+        <h3 id="tempMax" class="mb-2"></h3>
+        <h3 id="main" class="mb-2"></h3>
+        <h3 id="description" class="mb-2"></h3>
+    </div>
+    <h3 id="current-temp"></h3>
+    <h3 id="feelsLike"></h3>
+    <h3 id="tempMin"></h3>
+    <h3 id="tempMax"></h3>
+    <h3 id="main"></h3>
+    <h3 id="description"></h3>
     </div>
 
     <!-- Outfit example -->
