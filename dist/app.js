@@ -15,6 +15,9 @@ function capitalizeWords(str) {
 }
 
 function getLocation() {
+    //remove hidden class from loading and add hidden class to getLocationBtn
+    document.getElementById('loading').classList.remove('hidden');
+    document.getElementById('getLocationBtn').classList.add('hidden');
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition, showError);
     } else {
@@ -85,6 +88,9 @@ function showPosition(position) {
                 }
             }
             changeImage();
+            //add hidden class from loading and remove hidden class to getLocationBtn
+            document.getElementById('loading').classList.add('hidden');
+            document.getElementById('getLocationBtn').classList.remove('hidden');
         })
         .catch((error) => {
             console.log('Error:', error);
