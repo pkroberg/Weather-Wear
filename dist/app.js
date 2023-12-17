@@ -1,9 +1,5 @@
-//call current weather data
-//api key e5bf64efcd979a72fe523a3c4c280da2
+//ADD API KEY TO showPosition function TO USE THIS APP
 
-let lat='';
-let lon='';
-let description='';
 //get my location button event listener and function
 document.getElementById('getLocationBtn').addEventListener('click', getLocation);
 
@@ -29,10 +25,10 @@ function showPosition(position) {
     const lat=position.coords.latitude;
     const lon=position.coords.longitude;
 
-    // Now you can use the latitude and longitude to make a request to your weather API
-    // Example:
-    const apiUrl=`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=e5bf64efcd979a72fe523a3c4c280da2`;
-    // Make your API request here and use the results to update the DOM
+    // use the latitude and longitude to make a request to your weather API
+    // !!!Add api key to the end of this URL!!!
+    const apiUrl=`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=`;
+    // Make  API request here and use the results to update the DOM
     fetch(apiUrl)
         .then((response) => response.json())
         .then((jsObject) => {
@@ -97,6 +93,7 @@ function showPosition(position) {
         });
 }
 
+//error function
 function showError(error) {
     switch (error.code) {
         case error.PERMISSION_DENIED:
