@@ -27,7 +27,7 @@ function showPosition(position) {
 
     // use the latitude and longitude to make a request to your weather API
     // !!!Add api key to the end of this URL!!!
-    const apiUrl=`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=`;
+    const apiUrl=`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=YOUR_API_KEY_HERE`;
     // Make  API request here and use the results to update the DOM
     fetch(apiUrl)
         .then((response) => response.json())
